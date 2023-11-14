@@ -16,9 +16,9 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <Header />
       <Container fixed>
         <CssBaseline />
-        <Header />
         <MainContainer />
       </Container>
     </ThemeProvider>

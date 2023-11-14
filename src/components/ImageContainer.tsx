@@ -11,7 +11,7 @@ type Props = {
 // https://eeii0a5l.github.io/mochifilter_homepage/youtube_thumbnail.html
 
 export const ImageContainer: FC<Props> = ({ vid }) => {
-  return (
+  return vid ? (
     <>
       <Image
         url={`http://img.youtube.com/vi/${vid}/maxresdefault.jpg`}
@@ -42,11 +42,7 @@ export const ImageContainer: FC<Props> = ({ vid }) => {
           url={`http://img.youtube.com/vi/${vid}/2.jpg`}
           text="2.jpg (120X90)"
         ></Image>
-        <Image
-          url={`http://img.youtube.com/vi/${vid}/3.jpg`}
-          text="3.jpg (120X90)"
-        ></Image>
       </Box>
     </>
-  );
+  ) : null;
 };
