@@ -16,9 +16,9 @@ export const MainContainer = () => {
     const result = url.match(regExp);
     if (result) {
       setVid(result[1]);
-    } else{
-    // 正規表現で[https://youtu.be/XXXXX?si=XTPTyQZTiISkBAzL]からv=XXXXXを抽出する
-    const regExpNext = new RegExp('https://youtu.be/([^?]*).*');
+    } else {
+      // 正規表現で[https://youtu.be/XXXXX?si=XTPTyQZTiISkBAzL]からv=XXXXXを抽出する
+      const regExpNext = new RegExp('https://youtu.be/([^?]*).*');
       const resultNext = url.match(regExpNext);
       if (resultNext) {
         setVid(resultNext[1]);
