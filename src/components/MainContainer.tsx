@@ -28,16 +28,25 @@ export const MainContainer = () => {
     }
   };
 
+  const handleClear = () => {
+    setUrl('');
+    setVid('');
+  };
+
   return (
     <>
       <Box display="flex">
         <TextField
           label="YouTubeのURLを入力してください。"
+          value={url}
           onChange={handleChange}
-          sx={{ marginRight: '10px', width: '75%' }}
+          sx={{ marginRight: '10px', width: '70%' }}
         />
-        <Button variant="outlined" onClick={handleClick} sx={{ width: '25%' }}>
+        <Button variant="contained" onClick={handleClick} sx={{ width: '20%', marginRight:'10px' }}>
           画像取得
+        </Button>
+        <Button variant="outlined" onClick={handleClear} sx={{ width: '10%' }}>
+          クリア
         </Button>
       </Box>
       <ImageContainer vid={vid} />
