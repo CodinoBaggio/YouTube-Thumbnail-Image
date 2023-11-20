@@ -9,7 +9,7 @@ type Props = {
 export const Image: FC<Props> = ({ url, text }) => {
   return (
     <Box>
-      <img src={url} title={text} />
+      <img src={url} title={text} className='w-48' />
       <Typography>{text}</Typography>
     </Box>
   );

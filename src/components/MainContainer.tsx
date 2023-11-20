@@ -36,7 +36,7 @@ export const MainContainer = () => {
           onChange={handleChange}
           sx={{ marginRight: '10px', width: '75%' }}
         />
-        <Button variant="outlined" onClick={handleClick} sx={{ width: '25%' }}>
+        <Button variant="contained" onClick={handleClick} sx={{ width: '25%' }}>
           画像取得
         </Button>
       </Box>
