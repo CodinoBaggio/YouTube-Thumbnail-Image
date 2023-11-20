@@ -12,37 +12,43 @@ type Props = {
 
 export const ImageContainer: FC<Props> = ({ vid }) => {
   return vid ? (
-    <>
+    <Box className="p-2">
       <Image
         url={`http://img.youtube.com/vi/${vid}/maxresdefault.jpg`}
         text="maxresdefault.jpg (1280X720)"
       ></Image>
-      <Image
-        url={`http://img.youtube.com/vi/${vid}/sddefault.jpg`}
-        text="sddefault.jpg (640X480)"
-      ></Image>
-      <Image
-        url={`http://img.youtube.com/vi/${vid}/hqdefault.jpg`}
-        text="hqdefault.jpg (480X360)"
-      ></Image>
-      <Image
-        url={`http://img.youtube.com/vi/${vid}/mqdefault.jpg`}
-        text="mqdefault.jpg (320X180)"
-      ></Image>
+      <Box display={'flex'}>
+        <Image
+          url={`http://img.youtube.com/vi/${vid}/sddefault.jpg`}
+          text="sddefault.jpg (640X480)"
+          sx={{ marginRight: '10px' }}
+        ></Image>
+        <Image
+          url={`http://img.youtube.com/vi/${vid}/hqdefault.jpg`}
+          text="hqdefault.jpg (480X360)"
+          sx={{ marginRight: '10px' }}
+        ></Image>
+        <Image
+          url={`http://img.youtube.com/vi/${vid}/mqdefault.jpg`}
+          text="mqdefault.jpg (320X180)"
+        ></Image>
+      </Box>
       <Box display={'flex'}>
         <Image
           url={`http://img.youtube.com/vi/${vid}/default.jpg`}
           text="default.jpg (120X90)"
+          sx={{ marginRight: '10px' }}
         ></Image>
         <Image
           url={`http://img.youtube.com/vi/${vid}/1.jpg`}
           text="1.jpg (120X90)"
+          sx={{ marginRight: '10px' }}
         ></Image>
         <Image
           url={`http://img.youtube.com/vi/${vid}/2.jpg`}
           text="2.jpg (120X90)"
         ></Image>
       </Box>
-    </>
+    </Box>
   ) : null;
 };
